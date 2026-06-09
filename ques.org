@@ -1,0 +1,498 @@
+
+                                      # basic programming exercises
+
+#1-Write a program that takes a number as input and prints whether it is positive, negative, or zero.
+
+# num = int(input("enter a number:"))
+# if num < 0:
+#     print("negative")
+# if num > 0:
+#     print("positive")
+# elif num == 0:
+#     print("zero")
+
+#2-Write a program that takes two numbers as input and prints the greater one. If both are equal, print "Both are equal".
+
+# num1 = int(input("enter a number:"))
+# num2 = int(input("enter another number:"))
+# if num1 > num2:
+#     print("first number is greater")
+# elif num2 > num1:
+#     print("second number is greater")
+# else:
+#     print("both numbers are equal")
+
+
+#3-Take a number as input. If it is even, print "Even".If it is odd, print "Odd".
+
+# num = int(input("enter a number:"))
+# if num % 2 == 0:
+#     print("Even")
+# else:
+#     print("Odd")
+
+#4-Write a program that takes a person's age as input.If age is 18 or above, print "You can vote".Otherwise print "You cannot vote".
+
+# age = int(input("enter your age:"))
+# if age >= 18:
+#     print("You can vote")
+# else:
+#     print("You cannot vote")
+
+#5-Print all numbers from 1 to 20 using a loop.
+
+# for i in range(1,21):
+#     print(f"{i}")
+
+
+#6-Print all even numbers from 1 to 50 using a loop.
+
+# for i in range(1,51):
+#     if i % 2 == 0:
+#         print(f"{i}")
+ 
+
+#7-Take a number n as input and print its multiplication table (from 1 to 10).
+
+# n = int(input("enter a number:"))
+# for i in range(1, 11):
+#     print(f"{n} x {i} = {n*i}")
+
+
+#8-Write a program that takes 5 numbers one by one using a loop and prints their sum at the end.
+
+# sum = 0
+# for _ in range(5):
+#     num = int(input("enter a number:"))
+#     sum += num
+# print(sum)
+
+
+#9-Take a number as input and print whether it is divisible by both 3 and 5, only by 3, only by 5, or by neither.
+
+# num = int(input("enter a number:"))
+# if num % 3 == 0 and num % 5 == 0:
+#     print("divisible by both 3 and 5")
+# elif num % 3 == 0:
+#     print("divisible by 3 only")
+# elif num % 5 == 0:
+#     print("divisible by 5 only")
+# else:
+#     print("divisible by neither 3 nor 5")
+
+
+#10-Take a number n as input. Using a loop, print all numbers from 1 to n that are divisible by either 2 or 3.
+
+# n = int(input("enter a number:"))
+# for i in range(1, n + 1):
+#     if i % 2 == 0 or i % 3 == 0:
+#         print(i)
+
+
+
+                                 #INTERMEDIATE (10 Questions)
+
+
+#11-Write a program that takes a number as input and checks if it is a prime number or not.
+
+# num = int(input("enter a number:"))
+# if num % 2 == 0 and num > 2:
+#     print("not a prime number")
+# else:
+#     print("prime number")
+
+
+#12-Take a number n as input. Print the sum of all digits of that number.
+
+# n = int(input("enter a number:"))
+# sum = 0
+# for digit in str(n):
+#     sum += int(digit)
+#     print(sum)
+
+
+#13-Write a program that takes a number and prints all its factors.
+# n = int(input("enter a number:"))
+# for i in range(1, n + 1):
+#     if n % i == 0:
+#         print(i)
+
+
+#14-Take 10 numbers as input using a loop. Print the largest and smallest among them without using max() or min().
+
+# n = int(input("enter a number:"))
+# largest = n
+# smallest = n
+# for _ in range(9):
+#     n = int(input("enter a number:"))
+#     if n > largest:
+#         largest = n
+#     if n < smallest:
+#         smallest = n
+# print(f"largest: {largest}")
+# print(f"smallest: {smallest}")
+
+
+
+#15-Write a program to check if a number is an Armstrong number.(Sum of digits each raised to power of total digit count)
+
+# n = int(input("enter a number:"))
+# sum = 0
+# for digit in str(n):
+#     sum += int(digit) ** len(str(n))
+# if sum == n:
+#     print("Armstrong number")
+# else:
+#     print("Not an Armstrong number")
+
+
+#16-Take a number n as input and print the Fibonacci series up to n terms.
+
+# n = int(input("enter a number:"))
+# a, b = 0, 1
+# for _ in range(n):
+#     print(a, end=" ")
+#     a, b = b, a + b
+
+
+#17-Write a program that keeps taking numbers as input in a loop until the user enters 0. At the end, print how many numbers were entered (not counting 0) and their sum.
+
+# n = int(input("enter a number (0 to stop):"))
+# count = 0
+# sum = 0
+# while n != 0:
+#     count += 1
+#     sum += n
+#     n = int(input("enter a number (0 to stop):"))
+# print(f"Numbers entered: {count}")
+# print(f"Sum: {sum}")
+
+
+#18-Write a program to reverse a number using a loop.
+
+# n = int(input("enter a number:"))
+# reverse = 0
+# while n != 0:
+#     reverse = reverse * 10 + n % 10
+#     n //= 10
+# print(f"Reversed number: {reverse}")
+
+
+#19-Take a number n as input. Using a loop, find and print the sum of all prime numbers from 1 to n.
+
+# n = int(input("enter a number:"))
+# sum = 0
+# for num in range(2, n + 1):
+#     if num > 1:
+#         for i in range(2, num):
+#             if num % i == 0:
+#                 break
+#         else:
+#             sum += num
+# print(f"Sum of prime numbers from 1 to {n}: {sum}")
+
+
+#20-Write a program that takes a number and counts how many digits it has using a loop — without converting to string.
+
+# n = int(input("enter a number;"))
+# count = 0
+# while n != 0:
+#     n //= 10
+#     count += 1
+# print(f"Number of digits: {count}")
+
+
+                                        #HARD (20 Questions)
+
+
+#21-Write a program that prints all prime numbers between 1 and 100.
+
+# for i in range(2,101):
+#     for j in range(2,i):
+#         if i % j == 0:
+#             break
+#     else:
+#         print(i)
+
+#22-Take a number as input and check if it is a palindrome using only loop and math logic (no string conversion).
+
+# n = int(input("enter a number:"))
+# original = n
+# reverse = 0
+# while n != 0:
+#     reverse = reverse * 10 + n % 10
+#     n //= 10
+# if reverse == original:
+#     print("Palindrome")
+# else:
+#     print("Not a Palindrome")
+
+
+
+#23-Write a program to find the GCD (Greatest Common Divisor) of two numbers using a loop. No built-in functions.
+
+# num1 = int(input("enter first number: "))
+# num2 = int(input("enter second number: "))
+# GCD = 1
+# for i in range(1, min(num1, num2) + 1):
+#     if num1 % i == 0 and num2 %i == 0:
+#         GCD = i
+#         print(f"GCD: {GCD}")
+
+
+
+#24-Take a sentence as input and count how many vowels are in it using a loop and conditionals.
+# sentence = input("enter a sentence: ")
+# vowel_count = 0
+# for char in sentence:
+#     if char.lower() in "aeiou":
+#         vowel_count += 1
+# print(f"{vowel_count}")
+
+
+#25-Write a program to check if a number is a Perfect Number.(Sum of proper divisors = number itself)
+
+# sum = 0 
+# num = int(input("enter a number:"))
+# for i in range(1, num):
+#     if num % i == 0:
+#         sum += i
+# if sum == num:
+#     print("perfect number")
+# else:
+#     print("not a perfect number")
+    
+
+#26-Write a program to print the first n prime numbers.
+
+# n = int(input("enter a number n that you want to print prime numbers up to:"))
+# count = 0
+# for num in range(2, 1000):
+#     if num > 1:
+#         for i in range(2, num):
+#             if num % i == 0:
+#                 break
+#         else:
+#             count += 1
+#             print(num)
+#     if count == n:
+#         break
+
+
+#27-A number is called a Disarium number if the sum of its digits raised to their position equals the number.
+
+# n = int(input("enter a number to check if it is a Disarium number: "))
+# sum = 0
+# for i, digit in enumerate(str(n), start=1):
+#     sum += int(digit) ** i
+#     if sum == n:
+#         print("disarium number")
+#         break
+# else:
+#     print("not a disarium number")
+
+
+#28-Take a number and print its binary equivalent using a loop — no bin() or any built-in conversion function.
+
+# n = int(input("enter a number: "))
+# binary = ""
+# while n > 0:
+#     binary = str(n % 2) + binary
+#     n //= 2
+# print(f"Binary equivalent: {binary}")
+
+
+
+#29-Write a program to find all pairs of numbers between 1 and 50 whose sum is a prime number.
+
+# for i in range(1,51):
+#     while i < 50:
+#         sum = i + (i + 1)
+#         for i in range(2, sum):
+#             if sum % i == 0:
+#                 break
+#         else:
+#             print(f"pair: ({i}, {i + 1}), sum: {sum} is a prime number")
+    
+
+#30-Take a number as input. Using a loop, find the nearest prime number greater than or equal to it
+# num = int(input("enter a number "))
+# while True:
+#     for i in range(2, num):
+#         if num % i == 0:
+#             break
+#         else:
+#             print(f"nearest prime number greatern than or equal to {num} is {num}")
+#             num += 1  
+
+
+
+#31-Write a program to print all Fibonacci numbers between 1 and 500 that are also prime
+
+# for i in range(1, 501):
+#     a, b = 0, 1
+#     while a <= i:
+#         if a == i:
+#             for j in range(2, a):
+#                 if a % j == 0:
+#                     break
+#             else:
+#                 print(a)
+
+
+#32-Write a program that reads numbers in a loop and separates them into two lists — one for primes, one for non-primes. Print both lists at the end. Stop when user enters -1.
+# primes = []
+# non_primes = []
+# while True:
+#     num = int(input("enter a number (-1 to stop):"))
+#     if num == -1:
+#         break
+#     for i in range(2, num):
+#         if num % i == 0:
+#             non_primes.append(num)
+#             break
+#     else:
+#         primes.append(num)
+# print("Prime numbers:", primes)
+# print("Non-prime numbers:", non_primes)
+
+
+#33-Write a program that takes a number n and checks how many numbers from 1 to n are Armstrong numbers. Print all of them and the count at the end.
+# n = int(input("enter a number n:"))
+# armstrong_numbers = []
+# for num in range(1, n + 1):
+#     order = len(str(num))
+#     sum = 0
+#     temp = num
+#     while temp > 0:
+#         digit = temp % 10
+#         sum += digit ** order
+#         temp //= 10
+#     if num == sum:
+#         armstrong_numbers.append(num)
+# print("Armstrong numbers:", armstrong_numbers)
+# print("Count:", len(armstrong_numbers))
+
+
+
+
+#34-Take two numbers a and b as input. Print all numbers between a and b that are divisible by 7 but not by 3.
+
+
+# a = int(input("enter the first number: "))
+# b = int(input("enter the second number: "))
+
+# for num in range(a, b + 1):
+#     if num % 7 == 0 and num % 3 != 0:
+#         print(num)
+
+
+
+#35-Write a program to find the LCM (Least Common Multiple) of two numbers using a loop. No built-in functions.
+# num1 = int(input("enter first number: "))
+# num2 = int(input("enter second number: "))
+
+# # Find the larger number
+# if num1 > num2:
+#     greater = num1
+# else:
+#     greater = num2
+
+# # Iterate until we find a number that is divisible by both
+# while True:
+#     if greater % num1 == 0 and greater % num2 == 0:
+#         lcm = greater
+#         break
+#     greater += 1
+
+# print(f"LCM of {num1} and {num2} is {lcm}")
+
+
+#36-Take a number n. Find the sum of the Fibonacci series up to n terms where only even Fibonacci numbers are included.
+# n = int(input("enter a number n: "))
+# a, b = 0, 1
+# sum = 0
+# for _ in range(n):
+#     if a % 2 == 0:
+#         sum += a
+#     a, b = b, a + b
+# print(f"Sum of even Fibonacci numbers up to {n} terms: {sum}")
+
+
+
+#37-Write a program that takes a number and finds the next palindrome number greater than it using a loop.
+# num = int(input("enter a number to find the next palindrome number greater than it : "))
+# num += 1
+# while True:
+#     if str(num) == str(num)[::-1]:
+#         print(f"Next palindrome number greater than {num - 1} is {num}")
+#         break
+#     num += 1
+
+
+#38-Take a number n. Print all perfect numbers between 1 and n.
+
+# n = int(input("enter a number n: "))
+# perfect_numbers = []
+
+# for num in range(1, n + 1):
+#     divisors_sum = 0
+#     for i in range(1, num):
+#         if num % i == 0:
+#             divisors_sum += i
+#     if divisors_sum == num:
+#         perfect_numbers.append(num)
+
+# print("Perfect numbers between 1 and", n, "are:", perfect_numbers)
+
+
+
+
+#39-Write a program to check if a number is a Neon number.(Square the number, sum of digits of square = original)
+
+# num = int(input("Enter a number to check if it is a Neon number: "))
+# square = num * num
+# digit_sum = sum(int(digit) for digit in str(square))
+# if digit_sum == num:
+#     print(f"{num} is a Neon number.")
+# else:
+#     print(f"{num} is not a Neon number.")
+
+
+#40-Write a program that takes n numbers as input in a loop. At the end print: Sum, Average, Largest, Smallest, and Count of how many were prime. No max(), min(), or sum() allowed.
+
+# num = int(input("Enter the count of number you want to input: "))
+
+# sum = 0
+# count = 0
+# largest = float('-inf')
+# smallest = float('inf')
+# prime_count = 0
+
+# for _ in range(num):
+#     n = int(input("Enter a number: "))
+#     sum += n
+#     count += 1
+#     if n > largest:
+#         largest = n
+#     if n < smallest:
+#         smallest = n
+#     is_prime = True
+#     if n < 2:
+#         is_prime = False
+#     else:
+#         for i in range(2, int(n ** 0.5) + 1):
+#             if n % i == 0:
+#                 is_prime = False
+#                 break
+#     if is_prime:
+#         prime_count += 1
+
+# average = sum / count if count > 0 else 0
+
+# print(f"Sum: {sum}")
+# print(f"Average: {average}")
+# print(f"Largest: {largest}")
+# print(f"Smallest: {smallest}")
+# print(f"Count of prime numbers: {prime_count}")
+
